@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Clearer Frames, Anytime: Resolving Velocity Ambiguity in Video Frame Interpolation.">
+    <meta name="keywords" content="video frame interpolation, anytime, clearer, manipulated interpolation of anything">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InterpAny-Clearer</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-EDF010G6PN');
+
+
+    </script>
+
+    <script type="module"
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/zuica_icon.png">
+
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More Research
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://zzh-tech.github.io/BiT/">
+                        BiT
+                    </a>
+                    <a class="navbar-item" href="https://zzh-tech.github.io/Animation-from-Blur/">
+                        Animation-from-Blur
+                    </a>
+                    <a class="navbar-item" href="https://zzh-tech.github.io/Dual-Reversed-RS/">
+                        Dual-Reversed-RS
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+            </div>
+            <div class="container has-text-centered">
+                <h1 class="title is-1 publication-title">
+                    <u style="color: hotpink; text-decoration: underline dotted hotpink;">Clearer Frames,</u>
+                    <u style="color: dodgerblue; text-decoration: underline dotted dodgerblue;">Anytime:</u> Resolving Velocity Ambiguity in Video Frame
+                    Interpolation </h1>
+                <div class="is-size-5 publication-authors">
+                        <span class="author-block"><a
+                                href="https://zzh-tech.github.io/">Zhihang Zhong</a><sup>1,*</sup>,  </span>
+                    <span class="author-block"><a
+                            href="https://scholar.google.com/citations?user=BKYVv4MAAAAJ&hl=en">Gurunandan Krishnan</a><sup>2</sup>,  </span>
+                    <span class="author-block"><a
+                            href="https://jimmysuen.github.io/">Xiao Sun</a><sup>1</sup>,  </span>
+                    <span class="author-block"><a
+                            href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en">Yu Qiao</a><sup>1</sup>,  </span>
+                    <span class="author-block"><a
+                            href="https://sizhuoma.netlify.app/">Sizhuo Ma</a><sup>2</sup>,  </span>
+                    <span class="author-block"><a
+                            href="https://jianwang-cmu.github.io/">Jian Wang</a><sup>2</sup></span>
+                </div>
+
+                <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Shanghai AI Laboratory, </span>
+                    <span class="author-block"><sup>2</sup>Snap Inc.</span>
+                </div>
+
+                <div class="column has-text-centered">
+                    <div class="publication-links">
+                        <!--                        <span class="link-block">-->
+                        <!--                            <a href="https://github.com/zzh-tech/InterpAny-Clearer"-->
+                        <!--                               class="external-link button is-normal is-rounded is-dark">-->
+                        <!--                              <span class="icon">-->
+                        <!--                                  <i class="fas fa-file-pdf"></i>-->
+                        <!--                              </span>-->
+                        <!--                              <span>Paper</span>-->
+                        <!--                            </a>-->
+                        <!--                          </span>-->
+                        <!--                        <span class="link-block">-->
+                        <!--                            <a href="https://github.com/zzh-tech/InterpAny-Clearer"-->
+                        <!--                               class="external-link button is-normal is-rounded is-dark">-->
+                        <!--                              <span class="icon">-->
+                        <!--                                  <i class="ai ai-arxiv"></i>-->
+                        <!--                              </span>-->
+                        <!--                              <span>arXiv</span>-->
+                        <!--                            </a>-->
+                        <!--                        </span>-->
+                        <span class="link-block">
+                          <a href="https://github.com/zzh-tech/InterpAny-Clearer"
+                             class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Code</span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <!--            <video id="teaser" autoplay controls muted loop playsinline height="100%">-->
+            <!--                <source src="./static/images/teaser.mp4"-->
+            <!--                        type="video/mp4">-->
+            <!--            </video>-->
+            <h2 class="subtitle has-text-centered">
+                <b>
+                    We addressed velocity ambiguity in video frame interpolation, leading to: <br>
+                    <em style="color: red">Clearer anytime frame interpolation</em> & <em style="color: red">Manipulated
+                    interpolation of anything</em>.
+                </b>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+        <h2 class="title is-3">Clearer anytime frame interpolation</h2>
+    </div>
+</div>
+<br>
+
+<section class="hero is-dark is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div id="results-carousel" class="carousel results-carousel">
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00006/0277" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00006/0277_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00029/0419" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00029/0419_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00036/0310" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00036/0310_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00036/0320" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00036/0320_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00037/0345" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00037/0345_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00068/0261" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00068/0261_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00071/0366" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00071/0366_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00071/0808" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00071/0808_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results-item">
+                        <video poster="" id="00080/0050" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/webapp_demo/00080/0050_demo_converted.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <p>
+                        <em>
+                            <b>When integrating our plug-and-play training strategies ([D,R]) into the state-of-the-art
+                                learning-based models such as
+                                <a href="https://github.com/megvii-research/ECCV2022-RIFE">RIFE</a>,
+                                <a href="https://github.com/ltkong218/IFRNet">IFRNet</a>,
+                                <a href="https://github.com/MCG-NKU/AMT">AMT</a>,
+                                <a href="https://github.com/ltkong218/IFRNet">EMA-VFI</a>,
+                                and others, they exhibit markedly sharper outputs and superior perceptual quality in
+                                arbitrary time interpolations. <br> (Here, we employ RIFE as an illustrative example,
+                                generating 128 interpolated frames using just two images.)
+                            </b>
+                        </em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <!-- Paper video. -->
+    <div style="display: flex; justify-content: center; align-items: center; height: 75vh; width: 100%;">
+        <div style="width: 62%; height: auto;">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Manipulated interpolation of anything</h2>
+                    <br>
+                    <div class="publication-video">
+                        <iframe src="./static/webapp_demo/InterpAny-Clearer-Demo.mp4"
+                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <br>
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-three-quarters">
+                            <p>
+                                <em>
+                                    <b>
+                                        Additionally, our strategies enable temporal manipulation of each object
+                                        independently during the inference stage, offering a novel tool for video
+                                        editing tasks like re-timing.
+                                    </b>
+                                </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ Paper video. -->
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{kirillov2023segment,
+  title={Clearer Frames, Anytime: Resolving Velocity Ambiguity in Video Frame Interpolation},
+  author={Zhong, Zhihang and Krishnan, Gurunandan and Sun, Xiao and Qiao, Yu and Ma, Sizhuo and Wang, Jian},
+  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  year={2023}
+}
+</code></pre>
+    </div>
+</section>
+
+
+<section class="section" id="acknowledgements">
+    <div class="container content is-max-desktop">
+        <h2 class="title">Acknowledgements</h2>
+        <p>
+            We thank Dorian Chan, Zhirong Wu, and Stephen Lin for their insightful feedback and advice. Our thanks also
+            go to Vu An Tran for developing the web application, and to Wei Wang for coordinating the user study.
+        </p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <a class="icon-link"
+               href="https://github.com/zzh-tech/InterpAny-Clearer">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+            <a class="icon-link" href="https://github.com/zzh-tech" class="external-link" disabled>
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                    <p>
+                        Website template from <a href="https://hypernerf.github.io/">HyperNeRF</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+</html>
