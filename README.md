@@ -11,3 +11,16 @@ by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
 
 <sup>1</sup>Shanghai AI Laboratory, <sup>2</sup>Snap Inc., <sup>*</sup>First author, <sup>†</sup>Co-corresponding
 authors
+
+:point_right: [Project page](https://zzh-tech.github.io/InterpAny-Clearer/)  
+
+Please leave a :star: if you like this project!
+
+#### TL;DR:
+<em>
+We addressed velocity ambiguity in video frame interpolation, leading to:
+
+<b style="color: red">Clearer anytime frame interpolation</b> & <b style="color: red">Manipulated interpolation of anything</b>
+</em>
+
+**Coming soon!**
