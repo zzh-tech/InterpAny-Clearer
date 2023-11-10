@@ -1,0 +1,67 @@
+# screen sh ./scripts/train.sh 4 cfgs/R-IFRNet_septuplet_wofloloss.yaml 14514
+#exp_name: 300epoch_bs24_lr1e-4
+exp_name: TR-IFRNet
+seed: 2023
+epochs: 300
+distributed: true
+lr: 1e-4
+lr_min: 1e-5
+weight_decay: 1e-6
+resume_state: null
+save_dir: experiments
+eval_interval: 1
+
+network:
+  name: networks.SDI-R-IFRNet.Model
+
+data:
+  train:
+    name: datasets.vimeo_septuplet_recur_datasets.Vimeo90K_Train_Dataset
+    params:
+#      dataset_dir: /mnt/disks/ssd0/dataset/vimeo_septuplet
+      dataset_dir: ../../dataset/vimeo_septuplet
+      use_sdi: false
+      use_mask: false
+  val:
+    name: datasets.vimeo_septuplet_recur_datasets.Vimeo90K_Test_Dataset
+    params:
+#      dataset_dir: /mnt/disks/ssd0/dataset/vimeo_septuplet
+      dataset_dir: ../../dataset/vimeo_septuplet
+      use_sdi: false
+      use_mask: false
+  train_loader:
+    batch_size: 24
+    num_workers: 12
+  val_loader:
+    batch_size: 24
+    num_workers: 3
+
+logger:
+  use_wandb: false
+  resume_id: null
+
+losses:
+  - {
+    name: losses.loss.CharbonnierLoss,
+    nickname: l_rec,
+    params: {
+      loss_weight: 1.0,
+      keys: [ imgt_pred, imgt ]
+    }
+  }
+  - {
+    name: losses.loss.TernaryLoss,
+    nickname: l_ter,
+    params: {
+      loss_weight: 1.0,
+      keys: [ imgt_pred, imgt ]
+    }
+  }
+#  - {
+#    name: losses.loss.GeometryLoss,
+#    nickname: l_geo,
+#    params: {
+#      loss_weight: 0.01,
+#      keys: [ ft_pred, ft_gt ]
+#    }
+#  }

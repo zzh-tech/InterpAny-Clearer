@@ -1,0 +1,11 @@
+.vscode
+images
+data/models/sam_vit_b_01ec64.pth
+__pycache__
+*.npy
+*.pth
+*.onnx
+dances
+app_all.py
+dancimation.py
+filters.py

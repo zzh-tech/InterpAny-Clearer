@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 1;
+  border: 1px solid #888;
+  padding: 10px;
+}
+
+.mb-16 {
+  margin-bottom: 8px;
+}
+
+.column:nth-child(1) {
+  margin-right: 10px;
+}
+
+.scrollbable {
+  overflow: auto;
+}
+
+.photo-with-text {
+  display: flex;
+  align-items: center;
+}
+
+.border-outline {
+  border: 1px solid #888;
+  margin-right: 20px; /* Add spacing between the photo and text */
+  margin-bottom: 10px;
+}
+
+.margin-vertical-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 120px;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+#import {
+  margin: 0px;
+  padding-left: 4px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.upload-group {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 12px;
+}
+
+.upload-btn {
+  background-color: rgb(33, 150, 243);
+  color: rgb(255, 255, 255);
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+
+/* Style the modal */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  left: 43%;
+  top: 30%;
+  z-index: 1000;
+  position: absolute;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fefefe;
+}
+
+.modal-text {
+  margin-left: 0px;
+  margin-right: 70px;
+  font-size: 24px;
+}
+
+/* Create the circle loader with pure CSS */
+.loader{
+  left: 58%;
+  top: 20%;
+  z-index: 1000;
+  position: absolute;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 8px solid #ddd;
+  border-top: 8px solid #2196f3;
+  border-bottom: 8px solid #2196f3;
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* file upload */
+#form-file-upload {
+  height: 16rem;
+  width: 28rem;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#input-file-upload {
+  display: none;
+}
+
+#label-file-upload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+#label-file-upload.drag-active {
+  background-color: #ffffff;
+}
+
+.upload-button {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  background-color: transparent;
+}
+
+.upload-button:hover {
+  text-decoration-line: underline;
+}
+
+#drag-file-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.image-container {
+  border: 1px solid #ccc;
+  padding: 0px;
+  margin: 20px 20px 20px 20px;
+  background: #daedf8;
+  overflow: visible;
+  position: relative;
+}
+
+
+.close-button {
+  position: absolute;
+  cursor: pointer; 
+  float: right; 
+  margin-right: 5px; 
+  margin-top: 5px; 
+  width: 30px;
+  background: white;
+  border-radius: 15px;
+  color: white;
+  top: -20px;
+  right: -20px;
+  z-index: 9000;
+}

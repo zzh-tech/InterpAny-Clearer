@@ -1,0 +1,68 @@
+# CUDA_VISISIBLE_DEVICES=4,5,6,7 sh ./scripts/train.sh 4 cfgs/AMT-S_septuplet.yaml 14514
+# CUDA_VISISIBLE_DEVICES=4,5,6,7 screen sh ./scripts/train.sh 4 cfgs/AMT-S_septuplet.yaml 14514
+exp_name: 400epoch_bs24_lr2e-4
+seed: 2023
+epochs: 400
+distributed: true
+lr: 2e-4
+lr_min: 2e-5
+weight_decay: 0.0
+resume_state: null
+save_dir: experiments
+eval_interval: 1
+
+network:
+  name: networks.AMT-S.Model
+  params:
+    corr_radius: 3
+    corr_lvls: 4
+    num_flows: 3
+
+data:
+  train:
+    name: datasets.vimeo_septuplet_datasets.Vimeo90K_Train_Dataset
+    params:
+      dataset_dir: /mnt/disks/ssd0/dataset/vimeo_septuplet
+      use_flow: true
+  val:
+    name: datasets.vimeo_septuplet_datasets.Vimeo90K_Test_Dataset
+    params:
+      dataset_dir: /mnt/disks/ssd0/dataset/vimeo_septuplet
+      use_flow: true
+  train_loader:
+    batch_size: 24
+    num_workers: 12
+  val_loader:
+    batch_size: 24
+    num_workers: 3
+
+logger:
+  use_wandb: false
+  resume_id: null
+
+losses:
+  - {
+    name: losses.loss.CharbonnierLoss,
+    nickname: l_rec,
+    params: {
+      loss_weight: 1.0,
+      keys: [ imgt_pred, imgt ]
+    }
+  }
+  - {
+    name: losses.loss.TernaryLoss,
+    nickname: l_ter,
+    params: {
+      loss_weight: 1.0,
+      keys: [ imgt_pred, imgt ]
+    }
+  }
+  - {
+    name: losses.loss.MultipleFlowLoss,
+    nickname: l_flo,
+    params: {
+      loss_weight: 0.002,
+      keys: [ flow0_pred, flow1_pred, flow ]
+    }
+  }
+
