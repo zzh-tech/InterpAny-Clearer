@@ -31,6 +31,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
@@ -44,7 +45,7 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="icon" href="./static/images/zuica_icon.png">
+    <link rel="icon" href="./static/images/logo.png">
 
     <script defer src="./static/js/fontawesome.all.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
@@ -93,8 +94,12 @@
 <section class="hero">
     <div class="hero-body">
         <div class="container">
-            <div class="columns is-centered">
-            </div>
+            <!--            <div class="columns is-centered">-->
+            <!--                <div class="column is-4 has-text-centered">-->
+            <!--                    <img src="static/images/logo.png" alt="InterpAny-Clearer logo" width="288" style="border-radius: 8%;"/>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <br>
             <div class="container has-text-centered">
                 <h1 class="title is-1 publication-title">
                     <u style="color: hotpink; text-decoration: underline dotted hotpink;">Clearer Frames,</u>
@@ -111,14 +116,17 @@
                     <span class="author-block"><a
                             href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en">Yu Qiao</a><sup>1</sup>,  </span>
                     <span class="author-block"><a
-                            href="https://sizhuoma.netlify.app/">Sizhuo Ma</a><sup>2</sup>,  </span>
+                            href="https://sizhuoma.netlify.app/">Sizhuo Ma</a><sup>2,†</sup>,  </span>
                     <span class="author-block"><a
-                            href="https://jianwang-cmu.github.io/">Jian Wang</a><sup>2</sup></span>
+                            href="https://jianwang-cmu.github.io/">Jian Wang</a><sup>2,†</sup></span>
                 </div>
 
                 <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>Shanghai AI Laboratory, </span>
                     <span class="author-block"><sup>2</sup>Snap Inc.</span>
+                    <br>
+                    <span class="author-block"><sup>*</sup>First author,</span>
+                    <span class="author-block"><sup>†</sup>Co-corresponding authors</span>
                 </div>
 
                 <div class="column has-text-centered">
@@ -160,10 +168,9 @@
 <section class="hero teaser">
     <div class="hero-body">
         <div class="container is-max-desktop">
-            <!--            <video id="teaser" autoplay controls muted loop playsinline height="100%">-->
-            <!--                <source src="./static/images/teaser.mp4"-->
-            <!--                        type="video/mp4">-->
-            <!--            </video>-->
+            <img src="./static/images/teaser.jpg" alt="teaser">
+            <br>
+            <br>
             <h2 class="subtitle has-text-centered">
                 <b>
                     We addressed velocity ambiguity in video frame interpolation, leading to: <br>
@@ -278,7 +285,7 @@
 <section class="section">
     <!-- Paper video. -->
     <div style="display: flex; justify-content: center; align-items: center; height: 75vh; width: 100%;">
-        <div style="width: 62%; height: auto;">
+        <div style="width: 66%; height: auto;">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Manipulated interpolation of anything</h2>
@@ -308,19 +315,212 @@
     <!--/ Paper video. -->
 </section>
 
-<section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@article{kirillov2023segment,
-  title={Clearer Frames, Anytime: Resolving Velocity Ambiguity in Video Frame Interpolation},
-  author={Zhong, Zhihang and Krishnan, Gurunandan and Sun, Xiao and Qiao, Yu and Ma, Sizhuo and Wang, Jian},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2023}
-}
-</code></pre>
+<hr/>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Existing video frame interpolation (VFI) methods blindly predict where each object is at a
+                        specific timestep t ("time indexing"), which struggles to predict precise object movements.
+                        Given two images of a &#9918, there are infinitely many possible trajectories: accelerating or
+                        decelerating, straight or curved. This often results in blurry frames as the method averages out
+                        these possibilities. Instead of forcing the network to learn this complicated time-to-location
+                        mapping implicitly together with predicting the frames, we provide the network with an explicit
+                        hint on how far the object has traveled between start and end frames, a novel approach termed
+                        "distance indexing". This method offers a clearer learning goal for models, reducing the
+                        uncertainty tied to object speeds. We further observed that, even with this extra guidance,
+                        objects can still be blurry especially when they are equally far from both input frames
+                        (<i>i.e.</i>, halfway in-between), due to the directional ambiguity in long-range motion. To
+                        solve this, we propose an iterative reference-based estimation strategy that breaks down a
+                        long-range prediction into several short-range steps. When integrating our plug-and-play
+                        strategies into state-of-the-art learning-based models, they exhibit markedly sharper outputs
+                        and superior perceptual quality in arbitrary time interpolations, using a uniform distance
+                        indexing map in the same format as time indexing. Additionally, distance indexing can be
+                        specified pixel-wise, which enables temporal manipulation of each object independently, offering
+                        a novel tool for video editing tasks like re-timing.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <!--    &lt;!&ndash; Paper video. &ndash;&gt;-->
+        <!--    <div class="columns is-centered has-text-centered">-->
+        <!--      <div class="column is-four-fifths">-->
+        <!--        <h2 class="title is-2">Video</h2>-->
+        <!--        <div class="publication-video">-->
+        <!--          <iframe width="640" height="480" src="https://www.youtube.com/embed/qzgdE_ghkaI"-->
+        <!--                  title="YouTube video player" frameborder="0"-->
+        <!--                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
+        <!--                  allowfullscreen></iframe>-->
+        <!--        </div>-->
+        <!--      </div>-->
+        <!--    </div>-->
+        <!--    &lt;!&ndash;/ Paper video. &ndash;&gt;-->
     </div>
 </section>
 
+<section>
+    <div class="container is-max-desktop">
+        <div class="content has-text-justified">
+            <h3 class="title is-4">Velocity ambiguity problem</h3>
+            <p>
+                The current mainstream algorithm for arbitrary-time frame interpolation, denoted as \(\mathcal{F}\),
+                predicts the target frame \(I_t\) using the starting frame \(I_0\), the ending frame \(I_1\), and a time
+                index
+                \(t\) as inputs:
+
+                $$I_t = \mathcal{F}\left(I_0, I_1, t\right)$$
+
+                However, the unknown motion velocity of each independently moving object introduces the issue of
+                <b>"velocity ambiguity"</b>. This means there are multiple possible mappings from the same inputs to
+                different locations:
+
+                $$\left\{I_t^1, I_t^2, \ldots, I_t^n\right\} = \mathcal{F}(I_0, I_1, t)$$
+
+                Taking a &#9918 as an example, there are countless potential landing spots for the ball in mid-air,
+                leading to conflicts in learning during the training process.
+
+                In short, the algorithm cannot discern which scenario is correct to learn, so it settles for an average
+                state:
+
+                $$ \hat{I}_t = \mathbb{E}_{I_t \sim \mathcal{F}(I_0, I_1, t)}[I_t] $$
+
+                This results in the algorithm's prediction \(\hat{I}_t\) being blurry during testing:
+            </p>
+            <div class="has-text-centered">
+                <img style="width: 100%;" src="./static/images/velocity_ambiguity.jpg"
+                     alt="Velocity ambiguity"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+
+<section>
+    <div class="container is-max-desktop">
+        <div class="content has-text-justified">
+            <h3 class="title is-4">Disambiguation</h3>
+            <p>
+                To resolve velocity ambiguity, a new paradigm for index-based learning is required.
+                <i><b>We need to guide the algorithm on why objects land in certain positions:</b></i>
+                $$I_{t} = \mathcal{F}\left(I_0, I_1, \text{motion hint}\right)$$
+            </p>
+            <h4 class="title is-5">Distance indexing</h4>
+            <p>
+                In fact, the training approach using time indexing requires the algorithm to not only learn how to
+                interpolate frames but also to guess the mapping relationship from time to position, denoted as
+                \(\mathcal{D}\):
+
+                $$I_t = \mathcal{F}(I_0, I_1, t) \to I_t = \mathcal{F}(I_0, I_1, \mathcal{D}(t))$$
+
+                Our solution involves calculating a path distance ratio map \(D_t\) to replace the time \(t\) for
+                index-based learning:
+
+                $$I_t = \mathcal{F}(I_0, I_1, \mathcal{D}(t)) \to I_t = \mathcal{F}(I_0, I_1, D_t)$$
+            </p>
+            <div class="has-text-centered">
+                <img style="width: 100%;" src="./static/images/distance_indexing.jpg"
+                     alt="Distance indexing"/>
+            </div>
+            <br>
+            <p>
+                We first compute the optical flows from \(I_0\) to \(I_t\) and from \(I_0\) to \(I_1\), denoted as
+                \(V_{0\to t}\) and \(V_{0\to 1}\), respectively. Then, for each pixel location \((x,y)\), we calculate
+                the proportion of the optical flow \(V_{0\to t}\) projected onto \(V_{0\to 1}\), denoted as the "path
+                distance ratio":
+
+                $$D_t(x,y) = \frac{\left\Vert \mathbf{V}_{0\to t}(x,y)\right\Vert \cos{\theta}}{\left\Vert
+                \mathbf{V}_{0\to 1}(x,y) \right\Vert}$$
+
+                <i><b>With \(D_t\), the algorithm avoids the ambiguous time-to-position mappings during training caused
+                    by varying velocities, allowing for clearer predictions during testing. Importantly, even without
+                    the ability to calculate the exact \(D_t\) using ground truth labels during inference, providing a
+                    uniform index map similar to time indexing, <i>i.e.</i>, \(D_t=t\), the algorithm can still predict
+                    clearer images (simulating uniform motion of objects).</b></i>
+            </p>
+            <br>
+            <h4 class="title is-5">Iterative reference-based estimation</h4>
+            <p>
+                While path distance indexing helps us sidestep ambiguities in speed, it does not resolve directional
+                ambiguities. We apply a classic divide-and-conquer strategy to minimize the impact of directional
+                ambiguities, further improving the predicted outcome.
+                <br>
+                <b>In practice, we break down a long-distance inference into a series of short-distance inferences from
+                    near to far, using the previous inference, along with the starting and ending frames, as references
+                    to avoid accumulated errors:</b>
+
+                $$I_t = \mathcal{F}(I_0, I_1, D_t, I_{\text{ref}}, D_{\text{ref}})$$
+
+                For example, dividing the inference into two steps would look like:
+
+                $$I_{t/2} = \mathcal{F}(I_0, I_1, D_{t/2}, I_{0}, D_{0})$$
+
+                $$I_{t} = \mathcal{F}(I_0, I_1, D_{t}, I_{t/2}, D_{t/2})$$
+
+                Similarly, taking a &#9918 as an example, our proposed strategies are illustrated in the following
+                figure:
+            </p>
+            <div class="has-text-centered">
+                <img style="width: 100%;" src="./static/images/disambiguation.jpg"
+                     alt="Disambiguation"/>
+            </div>
+            <br>
+            <br>
+            <h4 class="title is-5">Editable interpolation</h4>
+            <p>
+                <b>Beyond using a uniform index map like time indexing, we can also take advantage of the 2D editable
+                    nature of path distance indexing to implement editable frame interpolation techniques.</b>
+                Initially, we can obtain masks for objects of interest using the Segment Anything Model (SAM). We then
+                customize the path distance curves for different object regions to achieve manipulated interpolation of
+                anything.
+            </p>
+            <div class="has-text-centered">
+                <img style="width: 100%;" src="./static/images/manipulation.jpg"
+                     alt="Manipulation"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+
+<section>
+    <div class="container is-max-desktop">
+        <div class="content has-text-justified">
+            <h2 class="title is-3">Ending</h2>
+            <p>
+                This work presents the next generation of video frame interpolation technology, aiming to inspire
+                readers and contribute to fields like video enhancement, editing, and generation! 🔥🔥🔥
+                <br>
+                Welcome to star <a href="https://github.com/zzh-tech/InterpAny-Clearer">this project</a>
+                and follow <a href="https://github.com/zzh-tech">the author's GitHub</a>～
+            </p>
+        </div>
+    </div>
+</section>
+
+<br>
+<hr/>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{zhong2023clearer,
+    title={Clearer Frames, Anytime: Resolving Velocity Ambiguity in Video Frame Interpolation},
+    author={Zhong, Zhihang and Krishnan, Gurunandan and Sun, Xiao and Qiao, Yu and Ma, Sizhuo and Wang, Jian},
+    journal={arXiv preprint arXiv:xxxx.xxxxx},
+    year={2023}}</code></pre>
+    </div>
+</section>
 
 <section class="section" id="acknowledgements">
     <div class="container content is-max-desktop">
