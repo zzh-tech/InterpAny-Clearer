@@ -1,4 +1,4 @@
-# <img src="./demo/logo.png" class="center" style="zoom:7%; border-radius: 8%" /> InterpAny-Clearer
+# InterpAny-Clearer
 
 #### :rocket: <u style="color: hotpink; text-decoration: underline dotted hotpink;">Clearer Frames,</u> <u style="color: dodgerblue; text-decoration: underline dotted dodgerblue;">Anytime</u>: Resolving Velocity Ambiguity in Video Frame Interpolation
 
@@ -21,24 +21,15 @@ Please leave a :star: if you like this project! :fire: :fire: :fire:
 
 #### TL;DR:
 
-
 We addressed velocity ambiguity in video frame interpolation through innovative distance indexing and iterative reference-based
 estimation strategies, resulting in:  
 <b style="color: orangered">Clearer anytime frame interpolation</b> & <b style="color: orangered">Manipulated
 interpolation of anything</b>
 
-
 <img src="./demo/teaser.jpg">
-
-<br />
 
 #### Time indexing vs. Distance indexing
 
-<style>
-tr, td{
-   border: none!important;
-}
-</style>
 <table style="width: 888px">
   <tr>
     <td align="center" style="font-size:18px; border: none;">[T] RIFE</td>
@@ -96,15 +87,8 @@ Examples:
 
 <img src="./demo/manipulation.jpg"/>
 
-<br />
-
 #### Demos
 
-<style>
-tr, td{
-   border: none!important;
-}
-</style>
 <table>
   <tr>
     <td><img src="./demo/manipulation1.gif"></td>
@@ -174,16 +158,18 @@ Testing with precomputed distance maps:
 ```shell
 python test.py --model [MODEL_NAME] --variant [VARIANT]
 ```
+Examples:  
 
 `python test.py --model RIFE --variant D`
 
 `python test.py --model RIFE --variant DR`
 
-Tested using uniform distance maps with the same inputs as the time indexes:
+Testing using uniform distance maps with the same inputs as the time indexes:
 
 ```shell
 python test.py --model [MODEL_NAME] --variant [VARIANT] --uniform
 ```
+Examples:  
 
 `python test.py --model RIFE --variant D --uniform`
 
