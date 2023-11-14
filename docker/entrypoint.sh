@@ -6,6 +6,7 @@ if [[ "$1" = "serve" ]]; then
     source activate InterpAny
     cd /InterpAny-Clearer/webapp/backend && nohup flask run -p 5001 --host "0.0.0.0" &
     cd /InterpAny-Clearer/webapp/webapp && yarn && nohup yarn start &
+    echo "Webapp is running on http://localhost:8080"
 else
     eval "$@"
 fi
