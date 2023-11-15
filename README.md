@@ -184,7 +184,7 @@ If you find this repository useful, please consider citing:
 @article{zhong2023clearer,
   title={Clearer Frames, Anytime: Resolving Velocity Ambiguity in Video Frame Interpolation},
   author={Zhong, Zhihang and Krishnan, Gurunandan and Sun, Xiao and Qiao, Yu and Ma, Sizhuo and Wang, Jian},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  journal={arXiv preprint arXiv:2311.08007},
   year={2023}
 }
 ```
