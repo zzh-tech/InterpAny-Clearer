@@ -31,7 +31,7 @@ ENV PATH="/opt/miniconda/bin:$PATH"
 RUN echo "source /opt/miniconda/etc/profile.d/conda.sh" >> /root/.bashrc 
 
 # RUN git clone https://github.com/Wei-ucas/InterpAny-Clearer.git /InterpAny-Clearer \
-COPY ../. /InterpAny-Clearer
+COPY . /InterpAny-Clearer
 RUN source ~/.bashrc \
     && cd /InterpAny-Clearer \
     && conda create -n InterpAny python=3.8 -y\
@@ -79,7 +79,7 @@ RUN echo "conda activate InterpAny" >> ~/.bashrc
 
 EXPOSE 5001 8080 
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ./docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
 CMD [ "serve" ]
