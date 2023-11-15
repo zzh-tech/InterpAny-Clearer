@@ -4,7 +4,7 @@
 
 ```shell
 cd docker
-docker build -t InterpAny .
+docker build -t interpany .
 ```
 
 ## Run Docker container
