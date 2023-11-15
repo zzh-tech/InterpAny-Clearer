@@ -12,12 +12,12 @@ docker build -t interpany .
 ### RUN the container
 
 ```shell
-docker run -it --name=interp -p 5001:5001 -p 8080:8080 --gpus all --shm-size=8g InterpAny
+docker run -it --name=interp -p 5001:5001 -p 8080:8080 --gpus all --shm-size=8g interpany
 ```
 After this command finishes, the webapp demo will be available at http://localhost:8080
 
 
 ```shell
-docker run -it --name=interp -p 5001:5001 -p 8080:8080 --gpus all --shm-size=8g InterpAny /bin/bash
+docker run -it --name=interp -p 5001:5001 -p 8080:8080 --gpus all --shm-size=8g interpany /bin/bash
 ``` 
 This will create a container that all environment is set up, and you can play with the code in the container.

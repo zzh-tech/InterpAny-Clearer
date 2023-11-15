@@ -30,7 +30,7 @@ ENV PATH="/opt/miniconda/bin:$PATH"
 # Update in bashrc
 RUN echo "source /opt/miniconda/etc/profile.d/conda.sh" >> /root/.bashrc 
 
-RUN git clone https://github.com/zzh-tech/InterpAny-Clearer.git /InterpAny-Clearer \
+RUN git clone https://github.com/Wei-ucas/InterpAny-Clearer.git /InterpAny-Clearer \
     && source ~/.bashrc \
     && cd /InterpAny-Clearer \
     && conda create -n InterpAny python=3.8 -y\
