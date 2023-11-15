@@ -9,7 +9,7 @@ by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
 1</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>2,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
 2,†</sup>
 
-<sup>1</sup>[Shanghai AI Laboratory](https://www.shlab.org.cn/), [OpenGVLab](https://github.com/OpenGVLab) <sup>2</sup>[Snap Inc.](https://snap.com/en-US), <sup>*</sup>First author, <sup>†</sup>Co-corresponding
+<sup>1</sup>[Shanghai AI Laboratory](https://www.shlab.org.cn/), [OpenGVLab](https://github.com/OpenGVLab), <sup>2</sup>[Snap Inc.](https://snap.com/en-US), <sup>*</sup>First author, <sup>†</sup>Co-corresponding
 authors  
 <br>
 We strongly recommend referring to the project page for a better understanding:
