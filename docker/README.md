@@ -3,8 +3,7 @@
 ## Build Docker image
 Make sure docker >= 19.03 and nvidia-container-toolkit >= 1.3 are installed.
 ```shell
-cd docker
-docker build -t interpany:v0 .
+docker build -t interpany:v0 -f docker/Dockerfile .
 ```
 
 ## Run Docker container
