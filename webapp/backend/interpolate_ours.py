@@ -65,6 +65,8 @@ class Interpolate:
 
         sdi_maps = [torch.zeros_like(I0[:, :1, :, :]) for _ in range(0, num)]
         for i, mask in enumerate(masks):
+            mask = torch.from_numpy(mask).to(self.device)
+            mask = F.pad(mask, padding, "constant", 1)
             control = controls[i]
             ctrl_x = np.linspace(0, 1, len(control))
             ctrl_y = a + b * (np.array(control) / 100.)
@@ -130,6 +132,9 @@ class Interpolate:
 
         imgs = [(img[0].clamp(0, 1).permute(1, 2, 0).detach().cpu().numpy() * 255.).astype(np.uint8) for img in imgs]
         imgs = [img[:h, :w] for img in imgs]
+        # to solve ffmpeg width not divisible by 2 Error
+        if w % 2 == 1:
+            imgs = [img[:, :-1] for img in imgs]
 
         # create video using cv2
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
