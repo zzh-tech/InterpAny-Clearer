@@ -12,9 +12,10 @@ by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
 <sup>1</sup>[Shanghai AI Laboratory, OpenGVLab](https://github.com/OpenGVLab), <sup>2</sup>[Snap Inc.](https://snap.com/en-US), <sup>*</sup>First author, <sup>†</sup>Co-corresponding
 authors  
 <br>
-We strongly recommend referring to the project page for a better understanding:
+We strongly recommend referring to the project page and interactive demo for a better understanding:
 
-:point_right: [project page](https://zzh-tech.github.io/InterpAny-Clearer/)  
+:point_right: [**project page**](https://zzh-tech.github.io/InterpAny-Clearer/)  
+:point_right: [**interactive demo**](http://ai4sports.opengvlab.com/interpany-clearer/)  
 :point_right: [arXiv](http://arxiv.org/abs/2311.08007)  
 :point_right: [slides](https://docs.google.com/presentation/d/1_aIkH_iZUZ2sdSRO9eict1HNAJbX-vQs/edit?usp=sharing&ouid=116575787119851482947&rtpof=true&sd=true)
 
