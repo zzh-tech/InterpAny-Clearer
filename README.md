@@ -9,13 +9,15 @@ by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
 1</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>2,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
 2,†</sup>
 
-<sup>1</sup>Shanghai AI Laboratory, <sup>2</sup>Snap Inc., <sup>*</sup>First author, <sup>†</sup>Co-corresponding
+<sup>1</sup>[Shanghai AI Laboratory, OpenGVLab](https://github.com/OpenGVLab), <sup>2</sup>[Snap Inc.](https://snap.com/en-US), <sup>*</sup>First author, <sup>†</sup>Co-corresponding
 authors  
 <br>
-We strongly recommend referring to the project page for a better understanding:
+We strongly recommend referring to the project page and interactive demo for a better understanding:
 
-:point_right: [project page](https://zzh-tech.github.io/InterpAny-Clearer/)  
-:point_right: [Slides](https://docs.google.com/presentation/d/1_aIkH_iZUZ2sdSRO9eict1HNAJbX-vQs/edit?usp=sharing&ouid=116575787119851482947&rtpof=true&sd=true)
+:point_right: [**project page**](https://zzh-tech.github.io/InterpAny-Clearer/)  
+:point_right: [**interactive demo**](http://ai4sports.opengvlab.com/interpany-clearer/)  
+:point_right: [arXiv](http://arxiv.org/abs/2311.08007)  
+:point_right: [slides](https://docs.google.com/presentation/d/1_aIkH_iZUZ2sdSRO9eict1HNAJbX-vQs/edit?usp=sharing&ouid=116575787119851482947&rtpof=true&sd=true)
 
 Please leave a :star: if you like this project! :fire: :fire: :fire:
 
@@ -184,7 +186,7 @@ If you find this repository useful, please consider citing:
 @article{zhong2023clearer,
   title={Clearer Frames, Anytime: Resolving Velocity Ambiguity in Video Frame Interpolation},
   author={Zhong, Zhihang and Krishnan, Gurunandan and Sun, Xiao and Qiao, Yu and Ma, Sizhuo and Wang, Jian},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  journal={arXiv preprint arXiv:2311.08007},
   year={2023}
 }
 ```
