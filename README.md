@@ -60,6 +60,10 @@ Download checkpoints from [here](https://drive.google.com/drive/folders/11MY60fp
 
 *P.S., RIFE-pro denotes the RIFE model trained with more data and epochs*
 
+#### Alternative: [Docker](/docker/README.md)
+You can build a docker image with all the dependencies installed. See [docker/README.md](/docker/README.md) for more details.
+
+
 ## Inference
 
 ### Two images
