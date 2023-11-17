@@ -50,6 +50,7 @@ interpolation of anything</b>
 ```shell
 conda create -n InterpAny python=3.8
 conda activate InterpAny
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install -r requirements.txt
 ```
 
@@ -58,6 +59,10 @@ pip install -r requirements.txt
 Download checkpoints from [here](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
 
 *P.S., RIFE-pro denotes the RIFE model trained with more data and epochs*
+
+#### Alternative: [Docker](/docker/README.md)
+You can build a docker image with all the dependencies installed. See [docker/README.md](/docker/README.md) for more details.
+
 
 ## Inference
 
