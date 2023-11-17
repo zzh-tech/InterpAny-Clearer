@@ -278,13 +278,13 @@
                         <em>
                             <b>When integrating our plug-and-play training strategies ([D,R]) into the state-of-the-art
                                 learning-based models such as
-                                <a href="https://github.com/megvii-research/ECCV2022-RIFE">RIFE</a>,
-                                <a href="https://github.com/ltkong218/IFRNet">IFRNet</a>,
-                                <a href="https://github.com/MCG-NKU/AMT">AMT</a>,
-                                <a href="https://github.com/ltkong218/IFRNet">EMA-VFI</a>,
-                                and others, they exhibit markedly sharper outputs and superior perceptual quality in
-                                arbitrary time interpolations. <br> (Here, we employ RIFE as an illustrative example,
-                                generating 128 interpolated frames using just two images.)
+                                <a href="https://github.com/megvii-research/ECCV2022-RIFE">RIFE [1]</a>,
+                                <a href="https://github.com/ltkong218/IFRNet">IFRNet [2]</a>,
+                                <a href="https://github.com/MCG-NKU/AMT">AMT [3]</a>, and
+                                <a href="https://github.com/ltkong218/IFRNet">EMA-VFI [4]</a>, they exhibit markedly
+                                sharper outputs and superior perceptual quality in arbitrary time interpolations. <br>
+                                (Here, we employ RIFE as an illustrative example, generating 128 interpolated frames
+                                using just two images.)
                             </b>
                         </em>
                     </p>
@@ -490,7 +490,7 @@
             <p>
                 <b>Beyond using a uniform index map like time indexing, we can also take advantage of the 2D editable
                     nature of path distance indexing to implement editable frame interpolation techniques.</b>
-                Initially, we can obtain masks for objects of interest using the Segment Anything Model (SAM). We then
+                Initially, we can obtain masks for objects of interest using the Segment Anything Model (SAM) [5]. We then
                 customize the path distance curves for different object regions to achieve manipulated interpolation of
                 anything.
             </p>
@@ -540,6 +540,33 @@
         <p>
             We thank Dorian Chan, Zhirong Wu, and Stephen Lin for their insightful feedback and advice. Our thanks also
             go to Vu An Tran for developing the web application, and to Wei Wang for coordinating the user study.
+        </p>
+    </div>
+</section>
+
+<section class="section" id="reference">
+    <div class="container content is-max-desktop">
+        <h2 class="title">Reference</h2>
+        <p>
+            [1] Huang, Zhewei, Tianyuan Zhang, Wen Heng, Boxin Shi, and Shuchang Zhou. "Real-time intermediate flow
+            estimation for video frame interpolation." In European Conference on Computer Vision, pp. 624-642. Cham:
+            Springer Nature Switzerland, 2022.
+            <br>
+            [2] Kong, Lingtong, Boyuan Jiang, Donghao Luo, Wenqing Chu, Xiaoming Huang, Ying Tai, Chengjie Wang, and Jie
+            Yang. "Ifrnet: Intermediate feature refine network for efficient frame interpolation." In Proceedings of the
+            IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 1969-1978. 2022.
+            <br>
+            [3] Li, Zhen, Zuo-Liang Zhu, Ling-Hao Han, Qibin Hou, Chun-Le Guo, and Ming-Ming Cheng. "AMT: All-Pairs
+            Multi-Field Transforms for Efficient Frame Interpolation." In Proceedings of the IEEE/CVF Conference on
+            Computer Vision and Pattern Recognition, pp. 9801-9810. 2023.
+            <br>
+            [4] Zhang, Guozhen, Yuhan Zhu, Haonan Wang, Youxin Chen, Gangshan Wu, and Limin Wang. "Extracting motion and
+            appearance via inter-frame attention for efficient video frame interpolation." In Proceedings of the
+            IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 5682-5692. 2023.
+            <br>
+            [5] Kirillov, Alexander, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao,
+            Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollár, and Ross Girshick. "Segment Anything." In
+            Proceedings of the IEEE/CVF International Conference on Computer Vision, pp. 4015-4026. 2023
         </p>
     </div>
 </section>
