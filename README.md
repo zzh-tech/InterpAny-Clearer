@@ -18,8 +18,7 @@ We strongly recommend referring to the project page and interactive demo for a b
 :point_right: [**project page**](https://zzh-tech.github.io/InterpAny-Clearer/)  
 :point_right: [**interactive demo**](http://ai4sports.opengvlab.com/interpany-clearer/)  
 :point_right: [arXiv](http://arxiv.org/abs/2311.08007)  
-:
-point_right: [slides](https://docs.google.com/presentation/d/1_aIkH_iZUZ2sdSRO9eict1HNAJbX-vQs/edit?usp=sharing&ouid=116575787119851482947&rtpof=true&sd=true)
+:point_right: [slides](https://docs.google.com/presentation/d/1_aIkH_iZUZ2sdSRO9eict1HNAJbX-vQs/edit?usp=sharing&ouid=116575787119851482947&rtpof=true&sd=true)
 
 Please leave a :star: if you like this project! :fire: :fire: :fire:
 
