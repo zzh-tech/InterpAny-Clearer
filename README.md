@@ -9,7 +9,8 @@ by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
 1</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>2,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
 2,†</sup>
 
-<sup>1</sup>[Shanghai AI Laboratory, OpenGVLab](https://github.com/OpenGVLab), <sup>2</sup>[Snap Inc.](https://snap.com/en-US), <sup>*</sup>First author, <sup>†</sup>Co-corresponding
+<sup>1</sup>[Shanghai AI Laboratory, OpenGVLab](https://github.com/OpenGVLab), <sup>
+2</sup>[Snap Inc.](https://snap.com/en-US), <sup>*</sup>First author, <sup>†</sup>Co-corresponding
 authors  
 <br>
 We strongly recommend referring to the project page and interactive demo for a better understanding:
@@ -17,13 +18,15 @@ We strongly recommend referring to the project page and interactive demo for a b
 :point_right: [**project page**](https://zzh-tech.github.io/InterpAny-Clearer/)  
 :point_right: [**interactive demo**](http://ai4sports.opengvlab.com/interpany-clearer/)  
 :point_right: [arXiv](http://arxiv.org/abs/2311.08007)  
-:point_right: [slides](https://docs.google.com/presentation/d/1_aIkH_iZUZ2sdSRO9eict1HNAJbX-vQs/edit?usp=sharing&ouid=116575787119851482947&rtpof=true&sd=true)
+:
+point_right: [slides](https://docs.google.com/presentation/d/1_aIkH_iZUZ2sdSRO9eict1HNAJbX-vQs/edit?usp=sharing&ouid=116575787119851482947&rtpof=true&sd=true)
 
 Please leave a :star: if you like this project! :fire: :fire: :fire:
 
 #### TL;DR:
 
-We addressed velocity ambiguity in video frame interpolation through innovative distance indexing and iterative reference-based
+We addressed velocity ambiguity in video frame interpolation through innovative distance indexing and iterative
+reference-based
 estimation strategies, resulting in:  
 <b style="color: orangered">Clearer anytime frame interpolation</b> & <b style="color: orangered">Manipulated
 interpolation of anything</b>
@@ -45,7 +48,11 @@ interpolation of anything</b>
 
 ## Preparation
 
-#### Conda environment installation:
+### Environment installation:
+
+You can try Anaconda or Docker to setup the environment.
+
+#### Anaconda
 
 ```shell
 conda create -n InterpAny python=3.8
@@ -54,15 +61,16 @@ pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --e
 pip install -r requirements.txt
 ```
 
-#### Download checkpoints
+#### Docker
+
+You can build a docker image with all dependencies installed.  
+See [docker/README.md](./docker/README.md) for more details.
+
+### Download checkpoints
 
 Download checkpoints from [here](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
 
 *P.S., RIFE-pro denotes the RIFE model trained with more data and epochs*
-
-#### Alternative: [Docker](/docker/README.md)
-You can build a docker image with all the dependencies installed. See [docker/README.md](/docker/README.md) for more details.
-
 
 ## Inference
 
@@ -84,17 +92,17 @@ Examples:
 python inference_video.py --video [VIDEO] --output_dir [OUTPUT_DIR] --model_name [MODEL_NAME] --variant [VARIANT]
 ```
 
-Examples:  
+Examples:
 
 `python inference_video.py --video ./demo/demo.mp4 --model RIFE --variant DR --checkpoint ./checkpoints/RIFE/DR-RIFE-pro --save_dir ./results/demo_results_DR-RIFE-pro --num 3`
 
 ## Manipulation
 
-#### Manipulated interpolation of anything
+### Manipulated interpolation of anything
 
 <img src="./demo/manipulation.jpg"/>
 
-#### Demos
+### Demos
 
 <table>
   <tr>
@@ -104,7 +112,14 @@ Examples:
   </tr>
 </table>
 
-#### Additional installation
+### Webapp
+
+You can play with the [interactive demo](http://ai4sports.opengvlab.com/interpany-clearer/) or install the webapp
+locally.
+
+#### Install the webapp locally
+
+P.S., not required if you use docker
 
 Follow [./webapp/backend/README.md](./webapp/backend/README.md) to setup the environment for Segment Anything.  
 Follow [./webapp/webapp/README.md](./webapp/webapp/README.md) to setup the environment for the webapp.
@@ -165,7 +180,8 @@ Testing with precomputed distance maps:
 ```shell
 python test.py --model [MODEL_NAME] --variant [VARIANT]
 ```
-Examples:  
+
+Examples:
 
 `python test.py --model RIFE --variant D`
 
@@ -176,7 +192,8 @@ Testing using uniform distance maps with the same inputs as the time indexes:
 ```shell
 python test.py --model [MODEL_NAME] --variant [VARIANT] --uniform
 ```
-Examples:  
+
+Examples:
 
 `python test.py --model RIFE --variant D --uniform`
 
