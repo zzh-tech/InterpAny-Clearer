@@ -18,4 +18,4 @@ This command will build a container with the name `interp`, which serves a webap
 ```shell
 docker run -it --name=interp -p 5001:5001 -p 8080:8080 --gpus all --shm-size=8g interpany:v0 /bin/bash
 ``` 
-With '/bin/bash/' augmentation, only the container with all the dependencies is built, and you can play with the code in it.
+With '/bin/bash/' augmentation, only the container with all the dependencies is built, and the project code is located at "/InterpAny-Clearer" in the container.
