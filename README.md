@@ -67,7 +67,7 @@ See [docker/README.md](./docker/README.md) for more details.
 
 ### Download checkpoints
 
-Download checkpoints from [here](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
+Download checkpoints from [here (full)](https://drive.google.com/file/d/14GJSqsX4H5EcQjd-tLb5CM_jzD-577bl/view?usp=sharing) / [here (seperate)](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
 
 *P.S., RIFE-pro denotes the RIFE model trained with more data and epochs*
 
