@@ -22,6 +22,9 @@ We strongly recommend referring to the project page and interactive demo for a b
 
 Please leave a :star: if you like this project! :fire: :fire: :fire:
 
+#### News
+- :tada: **2023-11-28**: We have added an interface for video inference to the [interactive demo](http://ai4sports.opengvlab.com/interpany-clearer/), and uploaded [checkpoints](https://drive.google.com/drive/folders/1zCyySQT7Or9P2Q2qOhG116RRdcaDsjr5?usp=sharing) trained with the LPIPS loss.
+
 #### TL;DR:
 
 We addressed velocity ambiguity in video frame interpolation through innovative distance indexing and iterative
@@ -69,7 +72,7 @@ See [docker/README.md](./docker/README.md) for more details.
 
 Download checkpoints from [here (full)](https://drive.google.com/file/d/14GJSqsX4H5EcQjd-tLb5CM_jzD-577bl/view?usp=sharing) / [here (seperate)](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
 
-*P.S., RIFE-pro denotes the RIFE model trained with more data and epochs*
+*P.S., RIFE-pro denotes the RIFE model trained with more data and epochs; RIFE-vgg denotes the RIFE model trained with the LPIPS loss (perceptually clearer, but may suffer from undesirable distortions)*
 
 ## Inference
 
@@ -82,6 +85,8 @@ python inference_img.py --img0 [IMG_0] --img1 [IMG_1] --output_dir [OUTPUT_DIR] 
 Examples:
 
 `python inference_img.py --img0 ./demo/I0_0.png --img1 ./demo/I0_1.png --model RIFE --variant DR --checkpoint ./checkpoints/RIFE/DR-RIFE-pro --save_dir ./results/I0_results_DR-RIFE-pro --num 1 1 1 1 1 1 1 --gif`
+
+`python inference_img.py --img0 ./demo/I0_0.png --img1 ./demo/I0_1.png --model RIFE --variant DR --checkpoint ./checkpoints/RIFE/DR-RIFE-vgg --save_dir ./results/I0_results_DR-RIFE-vgg --num 1 1 1 1 1 1 1 --gif`
 
 `python inference_img.py --img0 ./demo/I0_0.png --img1 ./demo/I0_1.png --model EMA-VFI --variant DR --checkpoint ./checkpoints/EMA-VFI/DR-EMA-VFI --save_dir ./results/I0_results_DR-EMA-VFI/ --num 1 1 1 1 1 1 1 --gif`
 
@@ -220,6 +225,7 @@ Tran for developing the web application, and to Wei Wang for coordinating the us
 
 Moreover, we appreciate the following projects for releasing their code:
 
+[[CVPR 2018] The Unreasonable Effectiveness of Deep Features as a Perceptual Metric](https://github.com/richzhang/PerceptualSimilarity)  
 [[ECCV 2020] RAFT: Recurrent All Pairs Field Transforms for Optical Flow](https://github.com/princeton-vl/RAFT)  
 [[ECCV 2022] Real-Time Intermediate Flow Estimation for Video Frame Interpolation](https://github.com/megvii-research/ECCV2022-RIFE)  
 [[CVPR 2022] IFRNet: Intermediate Feature Refine Network for Efficient Frame Interpolation](https://github.com/ltkong218/IFRNet)  
