@@ -44,6 +44,7 @@ if __name__ == '__main__':
                         help='path of checkpoint')
     parser.add_argument('--save_dir', type=str, default='./demo/I0_results/', help='where to save image results')
     parser.add_argument('--num', type=int, nargs='+', default=[1, 1], help='number of extracted images')
+    parser.add_argument('--fps', type=int, default=None, help='fps of the output video')
     args = parser.parse_args()
 
     model = Model(-1)
@@ -94,6 +95,8 @@ if __name__ == '__main__':
 
         # save video
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        if args.fps is not None:
+            fps = args.fps
         videoWriter = cv2.VideoWriter(save_path, fourcc, int(fps), (gif_imgs[0].shape[1], gif_imgs[0].shape[0]))
         # count = 0
         for img in gif_imgs:

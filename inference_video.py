@@ -42,6 +42,7 @@ if __name__ == '__main__':
     parser.add_argument('--num', type=int, nargs='+', default=[1, 1], help='number of extracted images')
     parser.add_argument('--iters', type=int, default=2, help='number of iterations')
     parser.add_argument('--gif', action='store_true', help='whether to generate the corresponding gif')
+    parser.add_argument('--fps', type=int, default=None, help='fps of the output video')
     args = parser.parse_args()
 
     prefix_path = '../..'
@@ -49,6 +50,7 @@ if __name__ == '__main__':
     args.checkpoint = osp.join(prefix_path, args.checkpoint)
     args.save_dir = osp.join(prefix_path, args.save_dir)
 
+    cmd = ''
     if args.model == 'RIFE':
         os.chdir('models/DI-RIFE')
         if args.variant == 'T':
@@ -66,6 +68,8 @@ if __name__ == '__main__':
             cmd = 'python inference_video_plus_sdi_recur.py --video {} --save_dir {} --checkpoint {} --num {} --iters {}'.format(
                 args.video, args.save_dir, args.checkpoint, ' '.join([str(x) for x in args.num]), args.iters
             )
+        if args.fps is not None:
+            cmd += ' --fps {}'.format(args.fps)
         os.system(cmd)
     if args.model == 'IFRNet' or args.model == 'AMT-S':
         os.chdir('models/DI-AMT-and-IFRNet')
@@ -82,6 +86,8 @@ if __name__ == '__main__':
             cmd = 'python inference_video_plus_sdi_recur.py --video {} --save_dir {} --checkpoint {} --cfg_name {} --num {} --iters {}'.format(
                 args.video, args.save_dir, args.checkpoint, cfg_name, ' '.join([str(x) for x in args.num]), args.iters
             )
+        if args.fps is not None:
+            cmd += ' --fps {}'.format(args.fps)
         os.system(cmd)
     if args.model == 'EMA-VFI':
         os.chdir('models/DI-EMA-VFI')
@@ -98,4 +104,6 @@ if __name__ == '__main__':
             cmd = 'python inference_video_plus_sdi_recur.py --video {} --save_dir {} --checkpoint {} --num {} --iters {}'.format(
                 args.video, args.save_dir, args.checkpoint, ' '.join([str(x) for x in args.num]), args.iters
             )
+        if args.fps is not None:
+            cmd += ' --fps {}'.format(args.fps)
         os.system(cmd)

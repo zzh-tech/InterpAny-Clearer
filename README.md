@@ -93,7 +93,9 @@ python inference_video.py --video [VIDEO] --output_dir [OUTPUT_DIR] --model_name
 
 Examples:
 
-`python inference_video.py --video ./demo/demo.mp4 --model RIFE --variant DR --checkpoint ./checkpoints/RIFE/DR-RIFE-pro --save_dir ./results/demo_results_DR-RIFE-pro --num 3`
+`python inference_video.py --video ./demo/demo.mp4 --model RIFE --variant DR --checkpoint ./checkpoints/RIFE/DR-RIFE-pro --save_dir ./results/demo_results_DR-RIFE-pro --num 3 --fps 15`
+
+P.S., if without `--fps`, the output video will have the same fps as the input video.
 
 ## Manipulation
 

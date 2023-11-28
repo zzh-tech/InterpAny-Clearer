@@ -57,6 +57,7 @@ if __name__ == '__main__':
     # half resolution
     parser.add_argument('--half', action='store_true', help='whether to use half resolution')
     parser.add_argument('--no_interp', action='store_true', help='do not interpolate video')
+    parser.add_argument('--fps', type=int, default=None, help='fps of the output video')
     args = parser.parse_args()
 
     model = Model(-1)
@@ -117,6 +118,8 @@ if __name__ == '__main__':
 
         # save video
         videofourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        if args.fps is not None:
+            fps = args.fps
         videoWriter = cv2.VideoWriter(save_path, videofourcc, int(fps), (gif_imgs[0].shape[1], gif_imgs[0].shape[0]))
         # count = 0
         # save gif

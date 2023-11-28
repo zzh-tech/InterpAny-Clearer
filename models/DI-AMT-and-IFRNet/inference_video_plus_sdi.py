@@ -48,6 +48,7 @@ if __name__ == '__main__':
     parser.add_argument('--cfg_name', type=str, default='AMT-S_septuplet_wofloloss.yaml', help='name of config file')
     parser.add_argument('--num', type=int, nargs='+', default=[5, 5], help='number of extracted images')
     parser.add_argument('--skip', type=int, default=1, help='down-sampling factor')
+    parser.add_argument('--fps', type=int, default=None, help='fps of the output video')
     args = parser.parse_args()
 
     # -----------------------  Load model -----------------------
@@ -106,6 +107,8 @@ if __name__ == '__main__':
 
         # save video
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        if args.fps is not None:
+            fps = args.fps
         videoWriter = cv2.VideoWriter(save_path, fourcc, int(fps), (gif_imgs[0].shape[1], gif_imgs[0].shape[0]))
         for img in gif_imgs:
             videoWriter.write(img)
