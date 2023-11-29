@@ -36,17 +36,27 @@ interpolation of anything</b>
 <img src="./demo/teaser.jpg">
 
 #### Time indexing vs. Distance indexing
+Comparison of x128 interpolation using only 2 frames as inputs:
 
-<table style="width: 888px">
+<table style="width: 1200px">
   <tr>
     <td align="center" style="font-size:18px; border: none;">[T] RIFE</td>
     <td align="center" style="font-size:18px; border: none;">[D,R] RIFE (Ours)</td>
+    <td align="center" style="font-size:18px; border: none;">[D,R] RIFE-vgg (Ours)</td>
   </tr>
   <tr>
-    <td valign="top" style="border: none;"><img src="./demo/T-RIFE.gif"></td>
-    <td valign="top" style="border: none;"><img src="./demo/DR-RIFE.gif"></td>
+    <td valign="top" style="border: none;"><img src="demo/T-RIFE_0.gif"></td>
+    <td valign="top" style="border: none;"><img src="demo/DR-RIFE_0.gif"></td>
+    <td valign="top" style="border: none;"><img src="demo/DR-RIFE-vgg_0.gif"></td>
+  </tr>
+  <tr>
+    <td valign="top" style="border: none;"><img src="demo/T-RIFE_1.gif"></td>
+    <td valign="top" style="border: none;"><img src="demo/DR-RIFE_1.gif"></td>
+    <td valign="top" style="border: none;"><img src="demo/DR-RIFE-vgg_1.gif"></td>
   </tr>
 </table>
+
+The results of [D,R] RIFE-vgg are perceptually clearer, but may suffer from undesirable distortions (see second row). We recommend using [D,R] RIFE for more stable results.
 
 ## Preparation
 
@@ -72,7 +82,7 @@ See [docker/README.md](./docker/README.md) for more details.
 
 Download checkpoints from [here (full)](https://drive.google.com/file/d/14GJSqsX4H5EcQjd-tLb5CM_jzD-577bl/view?usp=sharing) / [here (seperate)](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
 
-*P.S., RIFE-pro denotes the RIFE model trained with more data and epochs; RIFE-vgg denotes the RIFE model trained with the LPIPS loss (perceptually clearer, but may suffer from undesirable distortions)*
+*P.S., RIFE-pro denotes the RIFE model trained with more data and epochs; RIFE-vgg denotes the RIFE model trained with the LPIPS loss.*
 
 ## Inference
 
