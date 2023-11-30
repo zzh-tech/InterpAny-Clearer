@@ -163,3 +163,4 @@ demo/
 models/
 results/
 webapp/
+checkpoints/
