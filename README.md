@@ -24,7 +24,11 @@ We strongly recommend referring to the project page and interactive demo for a b
 Please leave a :star: if you like this project! :fire: :fire: :fire:
 
 #### News
-- :tada: **2023-11-28**: We have added an interface for video inference to the [interactive demo](http://ai4sports.opengvlab.com/interpany-clearer/), and uploaded [checkpoints](https://drive.google.com/drive/folders/1zCyySQT7Or9P2Q2qOhG116RRdcaDsjr5?usp=sharing) trained with the LPIPS loss.
+
+- :tada: **2023-11-28**: We have added an interface for video inference to
+  the [interactive demo](http://ai4sports.opengvlab.com/interpany-clearer/), and
+  uploaded [checkpoints](https://drive.google.com/drive/folders/1zCyySQT7Or9P2Q2qOhG116RRdcaDsjr5?usp=sharing) trained
+  with the LPIPS loss.
 
 #### TL;DR:
 
@@ -37,6 +41,7 @@ interpolation of anything</b>
 <img src="./demo/teaser.jpg">
 
 #### Time indexing vs. Distance indexing
+
 Comparison of x128 interpolation using only 2 frames as inputs:
 
 <table style="width: 1200px">
@@ -57,7 +62,8 @@ Comparison of x128 interpolation using only 2 frames as inputs:
   </tr>
 </table>
 
-The results of [D,R] RIFE-vgg are perceptually clearer, but may suffer from undesirable distortions (see second row). We recommend using [D,R] RIFE for more stable results.
+The results of [D,R] RIFE-vgg are perceptually clearer, but may suffer from undesirable distortions (see second row). We
+recommend using [D,R] RIFE for more stable results.
 
 ## Preparation
 
@@ -80,17 +86,20 @@ You can build a docker image with all dependencies installed.
 See [docker/README.md](./docker/README.md) for more details.
 
 ### Download checkpoints
+We provide checkpoints for four different models, including RIFE, IFRNet, AMT-S, and EMA-VFI.
 
-Download checkpoints from [here (full)](https://drive.google.com/file/d/14GJSqsX4H5EcQjd-tLb5CM_jzD-577bl/view?usp=sharing) / [here (seperate)](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
+Download checkpoints
+from [here (full)](https://drive.google.com/file/d/14GJSqsX4H5EcQjd-tLb5CM_jzD-577bl/view?usp=sharing) / [here (seperate)](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
 
-*P.S., RIFE-pro denotes the RIFE model trained with more data and epochs; RIFE-vgg denotes the RIFE model trained with the LPIPS loss.*
+*P.S., RIFE-pro denotes the RIFE model trained with more data and epochs; RIFE-vgg denotes the RIFE model trained with
+the LPIPS loss.*
 
 ## Inference
 
 ### Two images
 
 ```shell
-python inference_img.py --img0 [IMG_0] --img1 [IMG_1] --output_dir [OUTPUT_DIR] --model_name [MODEL_NAME] --variant [VARIANT] --gif
+python inference_img.py --img0 [IMG_0] --img1 [IMG_1] --output_dir [OUTPUT_DIR] --model [MODEL_NAME] --variant [VARIANT] --gif
 ```
 
 Examples:
@@ -104,7 +113,7 @@ Examples:
 ### Video
 
 ```shell
-python inference_video.py --video [VIDEO] --output_dir [OUTPUT_DIR] --model_name [MODEL_NAME] --variant [VARIANT]
+python inference_video.py --video [VIDEO] --output_dir [OUTPUT_DIR] --model [MODEL_NAME] --variant [VARIANT]
 ```
 
 Examples:
