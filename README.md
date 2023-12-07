@@ -102,7 +102,7 @@ the LPIPS loss.*
 ### Two images
 
 ```shell
-python inference_img.py --img0 [IMG_0] --img1 [IMG_1] --output_dir [OUTPUT_DIR] --model [MODEL_NAME] --variant [VARIANT] --gif
+python inference_img.py --img0 [IMG_0] --img1 [IMG_1] --output_dir [OUTPUT_DIR] --model [MODEL_NAME] --variant [VARIANT] --num [NUM] --gif
 ```
 
 Examples:
@@ -113,10 +113,13 @@ Examples:
 
 `python inference_img.py --img0 ./demo/I0_0.png --img1 ./demo/I0_1.png --model EMA-VFI --variant DR --checkpoint ./checkpoints/EMA-VFI/DR-EMA-VFI --save_dir ./results/I0_results_DR-EMA-VFI/ --num 1 1 1 1 1 1 1 --gif`
 
+`--num NUM` means to interpolate `NUM` frames between every two frames.   
+`--num NUM1 NUM2 ...` means that `NUM1` frames are interpolated between every two frames, then `NUM2` frames are interpolated between every two frames for the result of the interpolation, and so on.
+
 ### Video
 
 ```shell
-python inference_video.py --video [VIDEO] --output_dir [OUTPUT_DIR] --model [MODEL_NAME] --variant [VARIANT]
+python inference_video.py --video [VIDEO] --output_dir [OUTPUT_DIR] --model [MODEL_NAME] --variant [VARIANT] --num [NUM]
 ```
 
 Examples:
