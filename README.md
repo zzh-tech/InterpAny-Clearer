@@ -21,7 +21,7 @@ We strongly recommend referring to the project page and interactive demo for a b
 :point_right: [arXiv](http://arxiv.org/abs/2311.08007)  
 :point_right: [slides](https://docs.google.com/presentation/d/1_aIkH_iZUZ2sdSRO9eict1HNAJbX-vQs/edit?usp=sharing&ouid=116575787119851482947&rtpof=true&sd=true)
 
-Please leave a :star: if you like this project! :fire: :fire: :fire:
+Please leave a 🌟 if you like this project! 🔥🔥🔥
 
 #### News
 
@@ -61,6 +61,9 @@ Comparison of x128 interpolation using only 2 frames as inputs:
     <td valign="top" style="border: none;"><img src="demo/DR-RIFE-vgg_1.gif"></td>
   </tr>
 </table>
+
+[D]: distance indexing   
+[R]: iterative reference-based estimation   
 
 The results of [D,R] RIFE-vgg are perceptually clearer, but may suffer from undesirable distortions (see second row). We
 recommend using [D,R] RIFE for more stable results.
