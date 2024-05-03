@@ -3,10 +3,10 @@
 #### :rocket: <u style="color: hotpink; text-decoration: underline dotted hotpink;">Clearer Frames,</u> <u style="color: dodgerblue; text-decoration: underline dotted dodgerblue;">Anytime</u>: Resolving Velocity Ambiguity in Video Frame Interpolation
 
 by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
-1,*</sup>, [Gurunandan Krishnan](https://scholar.google.com/citations?user=BKYVv4MAAAAJ&hl=en)<sup>
-2</sup>, [Xiao Sun](https://jimmysuen.github.io/)<sup>
+1,*</sup>, [Xiao Sun](https://jimmysuen.github.io/)<sup>
 1</sup>, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en)<sup>
-1</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>2,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
+1</sup>, [Gurunandan Krishnan](https://scholar.google.com/citations?user=BKYVv4MAAAAJ&hl=en)<sup>
+2</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>2,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
 2,†</sup>
 
 <sup>1</sup>[Shanghai AI Laboratory, OpenGVLab](https://github.com/OpenGVLab), <sup>
@@ -24,11 +24,14 @@ We strongly recommend referring to the project page and interactive demo for a b
 Please leave a 🌟 if you like this project! 🔥🔥🔥
 
 #### News
-
+- :tada: **2024-05-02**: Our technology was used by [CCTV5 and CCTV5+](./demo/cctv5_interpany-clearer.mp4) for slow motion demonstrations of athletes jumping in the 2024 Thomas & Uber Cup! 🔥
 - :tada: **2023-11-28**: We have added an interface for video inference to
   the [interactive demo](http://ai4sports.opengvlab.com/interpany-clearer/), and
   uploaded [checkpoints](https://drive.google.com/drive/folders/1zCyySQT7Or9P2Q2qOhG116RRdcaDsjr5?usp=sharing) trained
   with the LPIPS loss.
+
+#### Application in CCTV
+<video src="./demo/cctv5_interpany-clearer.mp4" controls></video>
 
 #### TL;DR:
 
@@ -92,7 +95,7 @@ See [docker/README.md](./docker/README.md) for more details.
 We provide checkpoints for four different models, including RIFE, IFRNet, AMT-S, and EMA-VFI.
 
 Download checkpoints
-from [here (full)](https://drive.google.com/file/d/14GJSqsX4H5EcQjd-tLb5CM_jzD-577bl/view?usp=sharing) / [here (seperate)](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
+from [here (full)](https://drive.google.com/file/d/14GJSqsX4H5EcQjd-tLb5CM_jzD-577bl/view?usp=sharing) / [here (separate)](https://drive.google.com/drive/folders/11MY60fpDk5oAlGasQRZ3ss3xVdrOBIiE?usp=sharing).
 
 *P.S., RIFE-pro denotes the RIFE model trained with more data and epochs; RIFE-vgg denotes the RIFE model trained with
 the LPIPS loss.*
