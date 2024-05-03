@@ -31,7 +31,8 @@ Please leave a 🌟 if you like this project! 🔥🔥🔥
   with the LPIPS loss.
 
 #### Application in CCTV
-<video src="./demo/cctv5_interpany-clearer.mp4" controls></video>
+
+https://github.com/zzh-tech/InterpAny-Clearer/assets/68437458/a4b0bc95-d051-45ac-aaf1-400266a290d2
 
 #### TL;DR:
 
