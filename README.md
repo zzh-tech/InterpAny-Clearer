@@ -1,6 +1,6 @@
 # InterpAny-Clearer
 
-#### :rocket: <u style="color: hotpink; text-decoration: underline dotted hotpink;">Clearer Frames,</u> <u style="color: dodgerblue; text-decoration: underline dotted dodgerblue;">Anytime</u>: Resolving Velocity Ambiguity in Video Frame Interpolation
+#### :rocket: <u style="color: hotpink; text-decoration: underline dotted hotpink;">[ECCV2024] Clearer Frames,</u> <u style="color: dodgerblue; text-decoration: underline dotted dodgerblue;">Anytime</u>: Resolving Velocity Ambiguity in Video Frame Interpolation
 
 by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
 1,*</sup>, [Xiao Sun](https://jimmysuen.github.io/)<sup>
