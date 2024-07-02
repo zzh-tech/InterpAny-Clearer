@@ -24,7 +24,8 @@ We strongly recommend referring to the project page and interactive demo for a b
 Please leave a 🌟 if you like this project! 🔥🔥🔥
 
 #### News
-- :tada: **2024-05-02**: Our technology was used by [CCTV5 and CCTV5+](./demo/cctv5_interpany-clearer.mp4) for slow motion demonstrations of athletes jumping in the 2024 Thomas & Uber Cup! 🔥
+- :tada: **2024-07-01**: This work is accepted by ECCV2024! 🎆
+- :tada: **2024-05-02**: Our technology is used by [CCTV5 and CCTV5+](./demo/cctv5_interpany-clearer.mp4) for slow motion demonstrations of athletes jumping in the 2024 Thomas & Uber Cup! 🔥
 - :tada: **2023-11-28**: We have added an interface for video inference to
   the [interactive demo](http://ai4sports.opengvlab.com/interpany-clearer/), and
   uploaded [checkpoints](https://drive.google.com/drive/folders/1zCyySQT7Or9P2Q2qOhG116RRdcaDsjr5?usp=sharing) trained
