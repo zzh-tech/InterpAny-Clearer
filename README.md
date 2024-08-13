@@ -1,17 +1,19 @@
 # InterpAny-Clearer
 
-#### :rocket: <u style="color: hotpink; text-decoration: underline dotted hotpink;">[ECCV2024] Clearer Frames,</u> <u style="color: dodgerblue; text-decoration: underline dotted dodgerblue;">Anytime</u>: Resolving Velocity Ambiguity in Video Frame Interpolation
+#### :rocket: <u style="color: hotpink; text-decoration: underline dotted hotpink;">[ECCV2024 Oral] Clearer Frames,</u> <u style="color: dodgerblue; text-decoration: underline dotted dodgerblue;">Anytime</u>: Resolving Velocity Ambiguity in Video Frame Interpolation
 
 by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
-1,*</sup>, [Xiao Sun](https://jimmysuen.github.io/)<sup>
+1,*</sup>, [Gurunandan Krishnan](https://scholar.google.com/citations?user=BKYVv4MAAAAJ&hl=en)<sup>
+2</sup>, [Xiao Sun](https://jimmysuen.github.io/)<sup>
 1</sup>, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en)<sup>
-1</sup>, [Gurunandan Krishnan](https://scholar.google.com/citations?user=BKYVv4MAAAAJ&hl=en)<sup>
-2</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>2,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
+1</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>2,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
 2,†</sup>
 
+<sup>*</sup>First author, <sup>†</sup>Co-corresponding authors
+
 <sup>1</sup>[Shanghai AI Laboratory, OpenGVLab](https://github.com/OpenGVLab), <sup>
-2</sup>[Snap Inc.](https://snap.com/en-US), <sup>*</sup>First author, <sup>†</sup>Co-corresponding
-authors  
+2</sup>[Snap Inc.](https://snap.com/en-US)
+
 <br>
 We strongly recommend referring to the project page and interactive demo for a better understanding:
 
@@ -24,7 +26,8 @@ We strongly recommend referring to the project page and interactive demo for a b
 Please leave a 🌟 if you like this project! 🔥🔥🔥
 
 #### News
-- :tada: **2024-07-01**: This work is accepted by ECCV2024! 🎆
+- :tada: **2024-08-12**: Luckily, this work is recognized as **Oral** by ECCV2024! 🏁
+- :tada: **2024-07-01**: This work is accepted to ECCV2024! 🎆
 - :tada: **2024-05-02**: Our technology is used by [CCTV5 and CCTV5+](./demo/cctv5_interpany-clearer.mp4) for slow motion demonstrations of athletes jumping in the 2024 Thomas & Uber Cup! 🔥
 - :tada: **2023-11-28**: We have added an interface for video inference to
   the [interactive demo](http://ai4sports.opengvlab.com/interpany-clearer/), and
