@@ -15,6 +15,7 @@ import lpips
 import imageio as iio
 import os.path as osp
 import numpy as np
+import torch.nn.functional as F
 from model.RIFE_m import Model
 from argparse import ArgumentParser
 from tqdm import tqdm
@@ -28,13 +29,20 @@ def interpolate(I0, I1, num):
     I0 = (torch.tensor(I0.transpose(2, 0, 1)).to(device) / 255.).unsqueeze(0)
     I1 = (torch.tensor(I1.transpose(2, 0, 1)).to(device) / 255.).unsqueeze(0)
 
+    _, _, h, w = I0.shape
+    ph = ((h - 1) // 32 + 1) * 32
+    pw = ((w - 1) // 32 + 1) * 32
+    padding = (0, pw - w, 0, ph - h)
+    I0 = F.pad(I0, padding)
+    I1 = F.pad(I1, padding)
+
     timesteps = [j / (num + 1 + 1e-6) for j in range(1, num + 1)]
 
     for i, timestep in enumerate(timesteps):
         mid = model.inference(I0, I1, timestep=timestep)[0]
         mid = mid.clamp(0, 1).permute(1, 2, 0).detach().cpu().numpy()
         mid = (mid * 255.).astype(np.uint8)
-        imgs.append(mid)
+        imgs.append(mid[:h, :w])
     return imgs
 
 
