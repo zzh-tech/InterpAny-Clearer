@@ -152,7 +152,7 @@ class VimeoDataset(Dataset):
             # rgb/bgr augmentation
             if random.uniform(0, 1) < 0.5:
                 img0 = img0[:, :, ::-1]
-                img_recur = img0[:, :, ::-1]
+                img_recur = img_recur[:, :, ::-1]
                 gt = gt[:, :, ::-1]
                 img1 = img1[:, :, ::-1]
             # up/down flipping
