@@ -1,18 +1,34 @@
-# InterpAny-Clearer
+# InterpAny
+
+#### :rocket: <u style="color: hotpink; text-decoration: underline dotted hotpink;">[TPAMI 2026] </u> Velocity Disambiguation for Video Frame Interpolation
+
+by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
+1</sup>, Yiming Zhang<sup>
+2</sup>, Wei Wang<sup>
+3</sup>, [Xiao Sun](https://jimmysuen.github.io/)<sup>
+3</sup>, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en)<sup>
+3</sup>, [Gurunandan Krishnan](https://scholar.google.com/citations?user=BKYVv4MAAAAJ&hl=en)<sup>
+4</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>4,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
+4,†</sup>
+
+<sup>1</sup>Shanghai Jiao Tong University, <sup>
+2</sup>Cornell University, <sup>
+3</sup>Shanghai AI Laboratory, <sup>
+4</sup>Snap Inc.
 
 #### :rocket: <u style="color: hotpink; text-decoration: underline dotted hotpink;">[ECCV2024 Oral] Clearer Frames,</u> <u style="color: dodgerblue; text-decoration: underline dotted dodgerblue;">Anytime</u>: Resolving Velocity Ambiguity in Video Frame Interpolation
 
 by [Zhihang Zhong](https://zzh-tech.github.io/)<sup>
-1,*</sup>, [Gurunandan Krishnan](https://scholar.google.com/citations?user=BKYVv4MAAAAJ&hl=en)<sup>
+1</sup>, [Gurunandan Krishnan](https://scholar.google.com/citations?user=BKYVv4MAAAAJ&hl=en)<sup>
 2</sup>, [Xiao Sun](https://jimmysuen.github.io/)<sup>
 1</sup>, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en)<sup>
 1</sup>, [Sizhuo Ma](https://sizhuoma.netlify.app/)<sup>2,†</sup>, and [Jian Wang](https://jianwang-cmu.github.io/)<sup>
 2,†</sup>
 
-<sup>*</sup>First author, <sup>†</sup>Co-corresponding authors
+<sup>1</sup>Shanghai AI Laboratory, <sup>
+2</sup>Snap Inc.
 
-<sup>1</sup>[Shanghai AI Laboratory, OpenGVLab](https://github.com/OpenGVLab), <sup>
-2</sup>[Snap Inc.](https://snap.com/en-US)
+<sup>†</sup>Co-corresponding authors
 
 <br>
 We strongly recommend referring to the project page and interactive demo for a better understanding:
@@ -244,11 +260,21 @@ Examples:
 If you find this repository useful, please consider citing:
 
 ```bibtex
-@article{zhong2023clearer,
-  title={Clearer Frames, Anytime: Resolving Velocity Ambiguity in Video Frame Interpolation},
+@article{zhong2026velocity,
+  title={Velocity Disambiguation for Video Frame Interpolation},
+  author={Zhong, Zhihang and Zhang, Yiming and Wang, Wei and Sun, Xiao and Qiao, Yu and Krishnan, Gurunandan and Ma, Sizhuo and Wang, Jian},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2026},
+  publisher={IEEE}
+}
+
+@inproceedings{zhong2024clearer,
+  title={Clearer frames, anytime: Resolving velocity ambiguity in video frame interpolation},
   author={Zhong, Zhihang and Krishnan, Gurunandan and Sun, Xiao and Qiao, Yu and Ma, Sizhuo and Wang, Jian},
-  journal={arXiv preprint arXiv:2311.08007},
-  year={2023}
+  booktitle={European Conference on Computer Vision},
+  pages={346--363},
+  year={2024},
+  organization={Springer}
 }
 ```
 
